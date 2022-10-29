@@ -1,1 +1,16 @@
-
+CLIPS> (assert(silla))
+<Fact-1>
+CLIPS> (assert(banana))
+<Fact-2>
+CLIPS> (assert(simio))
+<Fact-3>
+CLIPS> (facts)
+f-1     (silla)
+f-2     (banana)
+f-3     (simio)
+For a total of 3 facts.
+CLIPS> (defrule movimiento(simio-camina-a-la-silla)=>(assert(llego-a-la-silla)))
+CLIPS> (defrule tomar(simio-toma-la-silla)=>(assert(simio-tomo-silla)))
+CLIPS> (defrule centrar(simio-lleva-silla-al-centro)=>(assert(simio-centro-silla)))
+CLIPS> (defrule subir(simio-subio-a-la-silla)=>(assert(simio-sobre-la-silla)))
+CLIPS> (defrule tomar-banana(simio-toma-la-banana)=>(assert(simio-tiene-la-banana)))
